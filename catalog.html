@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Catalog — AG Payal | Manufacturer of Handcrafted Anklet Designs</title>
+<meta name="description" content="Browse the full AG Payal design catalog by product line. Bulk orders only — enquire via WhatsApp or email for MOQ and pricing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#100C0A; --panel:#1B1512; --panel-2:#241C17;
+    --ink:#F3EBDD; --ink-soft:#C9BBA8; --ink-mute:#8C8072;
+    --gold-light:#E8CD8A; --gold:#C9A227; --gold-deep:#8C6E1B;
+    --wine:#6E1423; --wine-light:#9C2E40;
+    --line:#332821; --whatsapp:#25D366;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--ink);font-family:'Poppins',sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;}
+  .eyebrow{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.22em;color:var(--gold-light);margin-bottom:12px;}
+  .container{max-width:1320px;margin:0 auto;padding:0 24px;}
+  .gold-text{background:linear-gradient(120deg,var(--gold-light),var(--gold) 50%,var(--gold-deep));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  #scroll-progress{position:fixed;top:0;left:0;height:3px;z-index:80;background:linear-gradient(90deg,var(--wine-light),var(--gold));width:0%;}
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:75;width:100%;text-align:center;padding:10px 16px;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.16em;background:var(--panel);color:var(--ink-soft);border-bottom:1px solid var(--line);}
+  .topbar strong{color:var(--gold-light);}
+  header{position:fixed;top:37px;left:0;right:0;z-index:70;background:rgba(16,12,10,1);border-bottom:1px solid var(--line);}
+  .header-inner{max-width:1320px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;position:relative;}
+  .brand{font-family:'Playfair Display',serif;font-size:24px;}
+  .desktop-nav{display:flex;gap:34px;}
+  .nav-link{position:relative;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.08em;padding-bottom:4px;}
+  .nav-link::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s ease;}
+  .nav-link:hover::after,.nav-link.active::after{width:100%;}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.1em;padding:13px 26px;border:1px solid transparent;cursor:pointer;transition:all .3s ease;}
+  .btn-wa{background:var(--whatsapp);color:#fff;border-color:var(--whatsapp);}
+  .btn-wa:hover{background:transparent;color:var(--whatsapp);}
+  .btn-gold{background:var(--gold);color:#241c0a;border-color:var(--gold);}
+  .btn-gold:hover{background:transparent;color:var(--gold-light);}
+  .btn-sm{padding:10px 20px;font-size:11px;}
+  .burger{display:none;background:none;border:none;color:var(--ink);cursor:pointer;}
+  .drawer{position:fixed;inset:0;z-index:90;display:none;}
+  .drawer.open{display:block;}
+  .drawer-overlay{position:absolute;inset:0;background:rgba(0,0,0,.6);}
+  .drawer-panel{position:absolute;left:0;top:0;bottom:0;width:82%;max-width:340px;background:var(--panel);padding:28px;overflow-y:auto;}
+  .drawer-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;}
+  .drawer-panel nav{display:flex;flex-direction:column;gap:20px;font-family:'Inter',sans-serif;font-size:14px;margin-bottom:32px;}
+  .drawer-close{background:none;border:none;color:var(--ink);font-size:20px;cursor:pointer;}
+  .ph-box{position:relative;overflow:hidden;background:repeating-linear-gradient(135deg, var(--panel) 0 2px, var(--panel-2) 2px 22px);border:1px dashed var(--line);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;}
+  .ph-box svg{color:var(--ink-mute);}
+  .ph-label{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.12em;color:var(--ink-mute);text-align:center;padding:0 10px;}
+  .aspect-1{aspect-ratio:1/1;}
+  section{padding:96px 0;}
+  .page-hero{padding-top:170px;padding-bottom:56px;text-align:center;}
+  .page-hero .lead{color:var(--ink-soft);font-size:14px;max-width:520px;margin:16px auto 0;}
+  .diamond{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);margin:0 auto 22px;}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .filter-bar{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:16px;}
+  .filter-btn{font-family:'Inter',sans-serif;font-size:11.5px;letter-spacing:.08em;padding:10px 18px;border:1px solid var(--line);color:var(--ink-soft);background:var(--panel);cursor:pointer;transition:all .3s ease;}
+  .filter-btn:hover{border-color:var(--gold);color:var(--ink);}
+  .filter-btn.active{background:var(--gold);color:#241c0a;border-color:var(--gold);}
+  .result-count{font-family:'Inter',sans-serif;font-size:11.5px;color:var(--ink-mute);text-align:center;margin-bottom:40px;letter-spacing:.06em;}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;}
+  .product-card{transition:transform .5s cubic-bezier(.22,1,.36,1);}
+  .product-card:hover{transform:translateY(-6px);}
+  .product-media{position:relative;margin-bottom:16px;}
+  .product-actions{position:absolute;bottom:12px;left:12px;right:12px;display:flex;gap:8px;opacity:0;transform:translateY(8px);transition:all .3s ease;}
+  .product-card:hover .product-actions{opacity:1;transform:translateY(0);}
+  .action-btn{flex:1;text-align:center;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.08em;padding:10px;cursor:pointer;}
+  .action-wa{background:var(--whatsapp);color:#fff;}
+  .action-mail{background:var(--panel);color:var(--ink);border:1px solid var(--line);}
+  .product-tag{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;color:var(--gold-light);margin-bottom:6px;}
+  .product-card h3{font-size:15px;margin-bottom:6px;}
+  .product-card .moq{font-size:12.5px;color:var(--ink-soft);}
+  .cta-block{text-align:center;border-top:1px solid var(--line);}
+  .cta-block h2{font-size:1.8rem;margin-bottom:14px;}
+  .cta-block p{color:var(--ink-soft);font-size:14px;max-width:420px;margin:0 auto 32px;}
+  .cta-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;}
+  footer{background:#0A0706;padding-top:56px;padding-bottom:32px;}
+  .footer-bottom{max-width:1320px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'Inter',sans-serif;font-size:11.5px;color:var(--ink-mute);}
+  .footer-bottom a:hover{color:var(--ink);}
+  .fab-wa{position:fixed;bottom:24px;right:24px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--whatsapp);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.4);}
+  .fab-top{position:fixed;bottom:24px;left:24px;z-index:60;width:44px;height:44px;border-radius:50%;background:var(--gold);border:none;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.4);cursor:pointer;display:none;}
+  .fab-top.show{display:flex;}
+  ::-webkit-scrollbar{width:9px;} ::-webkit-scrollbar-thumb{background:var(--ink-mute);border-radius:20px;} ::-webkit-scrollbar-track{background:var(--bg);}
+  @media (max-width:980px){ .desktop-nav,.header-actions{display:none;} .burger{display:block;} .grid-4{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:640px){ .grid-4{grid-template-columns:repeat(2,1fr);} }
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important; animation:none !important;} }
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+<div class="topbar">MANUFACTURERS · BULK ORDERS ONLY · <strong>MOQ APPLIES</strong> · ENQUIRE VIA WHATSAPP OR EMAIL</div>
+
+<header id="site-header">
+<div class="header-inner">
+  <a href="index.html" style="display:flex;align-items:center;flex-shrink:0;">
+  <img src="logo.jpg" alt="AG Payal" style="height:48px;width:auto;">
+</a>
+
+    <button class="burger" id="burger-btn" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="desktop-nav">
+      <a href="index.html" class="nav-link">HOME</a>
+      <a href="catalog.html" class="nav-link active">PRODUCT RANGE</a>
+      <a href="wholesale.html" class="nav-link">MANUFACTURING</a>
+      <a href="wholesale.html" class="nav-link">WHOLESALE</a>
+      <a href="about.html" class="nav-link">ABOUT</a>
+      <a href="contact.html" class="nav-link">CONTACT</a>
+    </nav>
+   
+    <div class="header-actions">
+      <a href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20bulk%20orders%20from%20AG%20Payal" target="_blank" class="btn btn-wa btn-sm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 01-12.4 7.5L3 20l1.1-5.4A8.5 8.5 0 1121 11.5z"/></svg>
+        ENQUIRE
+      </a>
+    </div>
+  </div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="drawer-panel">
+      <div class="drawer-top"><span class="brand gold-text" style="font-size:20px;">AG PAYAL</span><button class="drawer-close" id="drawer-close">✕</button></div>
+      <nav><a href="index.html">HOME</a><a href="catalog.html">PRODUCT RANGE</a><a href="wholesale.html">MANUFACTURING</a><a href="wholesale.html">WHOLESALE</a><a href="about.html">ABOUT</a><a href="contact.html">CONTACT</a></nav>
+      <a href="https://wa.me/919876543210" target="_blank" class="btn btn-wa" style="width:100%;justify-content:center;">ENQUIRE ON WHATSAPP</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero container reveal">
+  <div class="diamond"></div>
+  <p class="eyebrow">FULL DESIGN CATALOG</p>
+  <h1>Our Product Range</h1>
+  <p class="lead">Every design is manufactured to order. Bulk orders only — filter by line below, then enquire on WhatsApp or email for MOQ, pricing, and lead time.</p>
+</div>
+
+<div class="container reveal">
+  <div class="filter-bar" id="filter-bar"></div>
+  <p class="result-count" id="result-count"></p>
+  <div class="grid-4" id="products-grid"></div>
+</div>
+
+<section class="cta-block container reveal">
+  <h2>Don't see what you're looking for?</h2>
+  <p>We also take custom design for bulk orders.</p>
+  <div class="cta-buttons">
+    <a href="https://wa.me/919876543210?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20custom%20design%20for%20bulk%20order" target="_blank" class="btn btn-wa">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 01-12.4 7.5L3 20l1.1-5.4A8.5 8.5 0 1121 11.5z"/></svg>
+      WHATSAPP US
+    </a>
+    <a href="mailto:hello@agpayal.in?subject=Custom%20Design%20Enquiry" class="btn btn-gold">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      EMAIL US
+    </a>
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-bottom" style="flex-direction:column;gap:16px;align-items:center;text-align:center;">
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Product Range</a>
+      <a href="wholesale.html">Wholesale</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="shipping-policy.html">Shipping Policy</a>
+      <a href="return-policy.html">Return Policy</a>
+      <a href="terms-conditions.html">Terms & Conditions</a>
+    </div>
+    <p>© 2026 AG Payal Pvt. Ltd. All rights reserved. Wholesale & bulk orders only.</p>
+  </div>
+</footer>
+<a href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20bulk%20orders" target="_blank" class="fab-wa" aria-label="Enquire on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6"><path d="M21 11.5a8.5 8.5 0 01-12.4 7.5L3 20l1.1-5.4A8.5 8.5 0 1121 11.5z"/></svg>
+</a>
+<button class="fab-top" id="back-to-top" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#241c0a" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+
+<script>
+const lines = ["All", "Bridal", "Traditional", "Minimal", "Daily Wear", "Kids", "Statement"];
+const products = [
+  {name:"Meera Ghungroo Payal", collection:"Traditional", moq:"200 pcs", img:"anklet1.jpg"},
+  {name:"Aarohi Chain Anklet", collection:"Daily Wear", moq:"300 pcs", img:"anklet2.jpg"},
+  {name:"Vintage Temple Payal", collection:"Traditional", moq:"250 pcs"},
+  {name:"Kundan Motif Anklet", collection:"Traditional", moq:"200 pcs"},
+  {name:"Aarohi Chain Anklet", collection:"Daily Wear", moq:"300 pcs"},
+  {name:"Everyday Curb Anklet", collection:"Daily Wear", moq:"300 pcs"},
+  {name:"Sleek Snake Chain Payal", collection:"Daily Wear", moq:"350 pcs"},
+  {name:"Rajwada Bridal Payal", collection:"Bridal", moq:"100 pcs"},
+  {name:"Suhaag Bridal Set", collection:"Bridal", moq:"100 pcs"},
+  {name:"Baraat Grand Payal", collection:"Bridal", moq:"120 pcs"},
+  {name:"Chandni Minimal Payal", collection:"Minimal", moq:"300 pcs"},
+  {name:"Ishaani Twist Anklet", collection:"Minimal", moq:"300 pcs"},
+  {name:"Simplicity Bar Anklet", collection:"Minimal", moq:"300 pcs"},
+  {name:"Zoya Stone-Set Anklet", collection:"Statement", moq:"150 pcs"},
+  {name:"Royal Cluster Anklet", collection:"Statement", moq:"150 pcs"},
+  {name:"Little Rani Kids Payal", collection:"Kids", moq:"250 pcs"},
+  {name:"Tiny Toes Adjustable Payal", collection:"Kids", moq:"250 pcs"},
+  {name:"Playful Bell Kids Anklet", collection:"Kids", moq:"250 pcs"},
+];
+const filterBar = document.getElementById('filter-bar');
+lines.forEach((l,i)=>{ filterBar.innerHTML += `<button class="filter-btn${i===0?' active':''}" data-filter="${l}">${l.toUpperCase()}</button>`; });
+function phBox(label){ return `<div class="ph-box aspect-1"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p class="ph-label">${label}</p></div>`; }
+const grid = document.getElementById('products-grid');
+const resultCount = document.getElementById('result-count');
+function renderGrid(filter){
+  const list = filter === "All" ? products : products.filter(p=>p.collection===filter);
+  resultCount.textContent = `SHOWING ${list.length} DESIGN${list.length!==1?'S':''}${filter!=="All" ? " IN " + filter.toUpperCase() : ""}`;
+  grid.innerHTML = list.map((p,i)=>`
+  <div class="product-card reveal" style="transition-delay:${Math.min(i,8)*50}ms">
+    <div class="product-media">
+       ${p.img ? `<img src="${p.img}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;">` : phBox('DESIGN · 500×500')}
+      <div class="product-actions">
+        <a href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20bulk%20ordering%20${encodeURIComponent(p.name)}" target="_blank" class="action-btn action-wa">WHATSAPP</a>
+        <a href="mailto:hello@agpayal.in?subject=Bulk%20Enquiry%3A%20${encodeURIComponent(p.name)}" class="action-btn action-mail">EMAIL</a>
+      </div>
+    </div>
+    <p class="product-tag">${p.collection.toUpperCase()}</p>
+    <h3>${p.name}</h3>
+    <p class="moq">MOQ: ${p.moq}</p>
+  </div>`).join('');
+  observeReveals();
+}
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    renderGrid(btn.dataset.filter);
+  });
+});
+renderGrid("All");
+function observeReveals(){
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>{
+    const io = new IntersectionObserver(entries=>{ entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); }, {threshold:.1});
+    io.observe(el);
+  });
+}
+observeReveals();
+window.addEventListener('scroll', ()=>{
+  const doc = document.documentElement;
+  const pct = (window.scrollY / (doc.scrollHeight - doc.clientHeight)) * 100;
+  document.getElementById('scroll-progress').style.width = pct + '%';
+  document.getElementById('back-to-top').classList.toggle('show', window.scrollY > 700);
+});
+document.getElementById('back-to-top').addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+const drawer = document.getElementById('drawer');
+document.getElementById('burger-btn').addEventListener('click', ()=> drawer.classList.add('open'));
+document.getElementById('drawer-close').addEventListener('click', ()=> drawer.classList.remove('open'));
+document.getElementById('drawer-overlay').addEventListener('click', ()=> drawer.classList.remove('open'));
+</script>
+</body>
+</html>
