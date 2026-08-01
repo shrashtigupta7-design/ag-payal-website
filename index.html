@@ -211,6 +211,7 @@
     </div>
   </div>
   <a href="#manufacturing" class="nav-link">MANUFACTURING</a>
+  <a href="brands.html" class="nav-link">BRANDS</a>
   <a href="#wholesale" class="nav-link">WHOLESALE</a>
   <a href="#about" class="nav-link">ABOUT</a>
   <a href="#contact" class="nav-link">CONTACT</a>
@@ -285,6 +286,19 @@
     <div class="grid grid-4" id="why-grid"></div>
   </div>
 </section>
+<section id="brands" class="container" style="padding:96px 0;">
+  <div class="section-head reveal">
+    <div class="diamond"></div>
+    <p class="eyebrow">MULTIPLE BRANDS, ONE MANUFACTURER</p>
+    <h2>Our Brands</h2>
+    <p>Each brand we manufacture under has its own purity standard, design language, and product lines. Explore the full lineup.</p>
+  </div>
+  <div class="grid grid-3" id="brands-teaser-grid"></div>
+  <div style="text-align:center; margin-top:48px;">
+    <a href="brands.html" class="btn btn-gold">VIEW ALL BRANDS</a>
+  </div>
+</section>
+
 
 <section class="container">
   <div class="products-head reveal">
@@ -439,6 +453,18 @@ whyItems.forEach((w,i)=>{ whyGrid.innerHTML += `<div class="why-item reveal" sty
   <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.3">${w.icon}</svg></div>
   <h3>${w.t}</h3><p>${w.d}</p>
 </div>`; });
+const brandsTeaser = [
+  {name:"AG Royale", purity:"92.5% Sterling Silver", desc:"Bridal & statement pieces"},
+  {name:"AG Traditio", purity:"92.5% Sterling Silver", desc:"Temple & heritage designs"},
+  {name:"AG Daily", purity:"Silver Alloy", desc:"Durable everyday wear"},
+];
+const brandsTeaserGrid = document.getElementById('brands-teaser-grid');
+brandsTeaser.forEach((b,i)=>{ brandsTeaserGrid.innerHTML += `<div class="text-center reveal" style="transition-delay:${i*80}ms;padding:32px 24px;background:var(--panel);border:1px solid var(--line);">
+  <h3 style="font-size:20px;margin-bottom:8px;">${b.name}</h3>
+  <p style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.1em;color:var(--gold-light);margin-bottom:12px;">${b.purity.toUpperCase()}</p>
+  <p style="font-size:13.5px;color:var(--ink-soft);">${b.desc}</p>  
+</div>`; });
+
 
 const productsGrid = document.getElementById('products-grid');
 productsGrid.innerHTML = products.map((p,i)=>`
