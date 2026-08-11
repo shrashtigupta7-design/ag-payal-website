@@ -1,4 +1,4 @@
-const brandsGrid = document.getElementById('brands-teaser');<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -458,7 +458,7 @@ const brandsTeaser = [
   {name:"AGSP", purity:"41% Silver-Tone Alloy", desc:"Temple & heritage designs"},
   {name:"AG7T", purity:"51% Silver-Tone Alloy", desc:"Durable everyday wear"},
 ];
-const brandsTeaserGrid = document.getElementById('s-teaser-grid');
+const brandsTeaserGrid = document.getElementById('brands-teaser-grid');
 brandsTeaser.forEach((b,i)=>{ brandsTeaserGrid.innerHTML += `<div class="text-center reveal" style="transition-delay:${i*80}ms;padding:32px 24px;background:var(--panel);border:1px solid var(--line);">
   <h3 style="font-size:20px;margin-bottom:8px;">${b.name}</h3>
   <p style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.1em;color:var(--gold-light);margin-bottom:12px;">${b.purity.toUpperCase()}</p>
