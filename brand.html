@@ -207,15 +207,16 @@ const brands = [
     purity:"Finished Silver Jewellery",
     desc:"Ready-to-retail finished pieces, crafted and polished for immediate sale — no additional processing required. Ideal for retailers who want stock-ready inventory.",
     lines:["Finished anklets", "Ready-to-sell payal sets", "Polished chain designs"]
+    img:"AGM.LOGO.JPEG"
   },
 ];
 const brandsList = document.getElementById('brands-list');
 brands.forEach((b,i)=>{
   brandsList.innerHTML += `
   <div class="brand-card reveal" style="transition-delay:${i*60}ms">
-    <div class="brand-media ph-box">
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-      <p class="ph-label">${b.name.toUpperCase()} · BRAND IMAGE · 600×750</p>
+        <div class="brand-media ${b.img ? '' : 'ph-box'}" ${b.img ? `style="background-image:url('${b.img}');background-size:cover;background-position:center;"` : ''}>
+      ${b.img ? '' : `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+      <p class="ph-label">${b.name.toUpperCase()} · BRAND IMAGE · 600×750</p>`}
     </div>
     <div class="brand-info">
       <span class="brand-purity">${b.purity}</span>
