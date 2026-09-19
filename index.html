@@ -411,12 +411,12 @@ const marquee = document.getElementById('marquee');
 for(let r=0;r<2;r++){ marqueeItems.forEach(t=>{ marquee.innerHTML += `<span>${t}</span><span class="dot">•</span>`; }); }
 
 const collections = [
-  {name:"Bridal Line", desc:"For bridal & wedding retailers"},
-  {name:"Traditional Line", desc:"Temple-inspired heritage designs"},
-  {name:"Minimal Line", desc:"Everyday, understated designs"},
-  {name:"Daily Wear Line", desc:"Durable, high-turnover designs"},
-  {name:"Kids Line", desc:"Adjustable, safe for children"},
-  {name:"Statement Line", desc:"Stone-set, eye-catching pieces"},
+  {name:"Bridal Line", desc:"For bridal & wedding retailers", img:"bridalpayal.png"},
+  {name:"Traditional Line", desc:"Temple-inspired heritage designs", img:"anklet1.jpg"},
+  {name:"Minimal Line", desc:"Everyday, understated designs", img:"chandni-minimal.jpg"},
+  {name:"Daily Wear Line", desc:"Durable, high-turnover designs", img:"aarohi-chain.jpg"},
+  {name:"Kids Line", desc:"Adjustable, safe for children", img:"little-rani-kids.jpg"},
+  {name:"Statement Line", desc:"Stone-set, eye-catching pieces", img:"zoya-stone-set.jpg"},
 ];
 const products = [
   {name:"Meera Ghungroo Payal", collection:"Traditional", moq:"200 pcs" , img:"anklet1.jpg"},
@@ -443,7 +443,7 @@ function phBox(label){ return `<div class="ph-box aspect-1"><svg width="26" heig
 
 const collGrid = document.getElementById('collections-grid');
 collections.forEach((c,i)=>{ collGrid.innerHTML += `<div class="coll-card reveal" style="transition-delay:${i*70}ms">
-  <div class="ph-box aspect-45"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p class="ph-label">${c.name.toUpperCase()} · 500×620</p></div>
+  ${c.img ? `<div class="aspect-45" style="background-image:url('${c.img}');background-size:cover;background-position:center;"></div>` : `<div class="ph-box aspect-45"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><p class="ph-label">${c.name.toUpperCase()} · 500×620</p></div>`}
   <h3>${c.name}</h3><p>${c.desc}</p>
   <a href="https://wa.me/919027004195?text=Hi%2C%20I%27m%20interested%20in%20your%20${encodeURIComponent(c.name)}" target="_blank">ENQUIRE ON WHATSAPP →</a>
 </div>`; });
