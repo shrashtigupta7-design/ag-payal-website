@@ -176,31 +176,29 @@ const brands = [
     name:"AGDX",
     purity:"35% Silver-Tone Alloy",
     desc:"Built for volume — lightweight, tarnish-resistant, and priced for high-turnover retail. This is our fastest-moving line for everyday-wear stockists.",
-    lines:["Bridal payal sets", "Stone-set statement anklets", "Matching bracelet pairs"]
+    lines:["Bridal payal sets", "Stone-set statement anklets", "Matching bracelet pairs"],
+    img:"agdx-logo.jpg"
   },
   {
     name:"AGSP",
     purity:"41% Silver-Tone Alloy",
     desc:"Temple-inspired and heritage designs rooted in traditional Rajasthani motifs — ghungroo detailing, antique finishes, and classic silhouettes for retailers serving traditional-wear buyers.",
-    lines:["Ghungroo payal", "Temple motif anklets", "Antique-finish designs"]
+    lines:["Ghungroo payal", "Temple motif anklets", "Antique-finish designs"],
+    img:"agsp-logo.jpg"
   },
   {
     name:"AG7T",
     purity:"51% Silver-Tone Alloy",
     desc:"Our mid-range alloy line, offering a balance of quality and affordability for retailers looking for durable, stylish pieces.",
-    lines:["Chain anklets", "Minimal bar designs", "Twist & curb chains"]
+    lines:["Chain anklets", "Minimal bar designs", "Twist & curb chains"],
+    img:"ag7t-logo.jpg"
   },
   {
     name:"AG91",
     purity:"61% Silver-Tone Alloy",
     desc:"Our highest-purity alloy line, designed for retailers who want a premium look and feel without the cost of fine silver. Ideal for high class fashion and lifestyle stores.",
-    lines:["Adjustable kids payal", "Bell & charm anklets", "Gift-set pairs"]
-  },
-  {
-    name:"AG Prime",
-    purity:"99.9% Fine Silver",
-    desc:"Our highest-purity line, developed for export buyers and premium private-label partners who require certified fine silver. Lower production volume, longer lead times.",
-    lines:["Fine silver statement pieces", "Certified export-grade anklets", "Custom private-label designs"]
+    lines:["Adjustable kids payal", "Bell & charm anklets", "Gift-set pairs"],
+    img:"ag91-logo.jpg"
   },
   {
     name:"AGM",
@@ -210,6 +208,7 @@ const brands = [
     img:"AGM.LOGO.jpeg"
   },
 ];
+
 const brandsList = document.getElementById('brands-list');
 brands.forEach((b,i)=>{
   const mediaClass = b.img ? 'brand-media' : 'brand-media ph-box';
